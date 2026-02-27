@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://betterstage.app">Website</a> · <a href="https://github.com/terrytz/BetterStage/releases">Releases</a> · <a href="https://github.com/terrytz/BetterStage/discussions">Discussions</a> · <a href="https://github.com/terrytz/BetterStage/issues">Report a Bug</a>
+  <a href="https://betterstage.app">Website</a> · <a href="https://github.com/terrytz/BetterStage/releases">Releases</a> · <a href="https://discord.gg/WXpH2MCvcn">Discord</a> · <a href="https://github.com/terrytz/BetterStage/discussions">Discussions</a> · <a href="https://github.com/terrytz/BetterStage/issues">Report a Bug</a>
 </p>
 
 ---
@@ -34,6 +34,7 @@ Get the latest version from [betterstage.app](https://betterstage.app) or check 
 ## Links
 
 - [Website](https://betterstage.app)
+- [Discord](https://discord.gg/WXpH2MCvcn)
 - [Report a Bug](https://github.com/terrytz/BetterStage/issues)
 - [Discussions](https://github.com/terrytz/BetterStage/discussions)
 
