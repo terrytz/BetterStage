@@ -4,7 +4,9 @@
 
 If you discover a security vulnerability in BetterStage, please report it responsibly.
 
-**Email:** security@betterstage.app
+- **Discord DM:** [discord.gg/WXpH2MCvcn](https://discord.gg/WXpH2MCvcn)
+- **GitHub DM:** [@terrytz](https://github.com/terrytz)
+- **Email:** security@betterstage.app
 
 Please do not open public issues for security vulnerabilities.
 

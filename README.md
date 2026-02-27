@@ -46,7 +46,7 @@ Toggle auto-tiling per stage and windows arrange themselves in a clean BSP grid.
 
 ### Snap Wheel
 
-Hold `Ctrl+Opt` or middle-click a title bar to open a radial menu — snap zones, stage assignment, and tiling actions in one gesture. Pick a zone and release.
+Hold `Ctrl+Opt` on a title bar or middle-click anywhere to open a radial menu — snap zones, stage assignment, and tiling actions in one gesture. Pick a zone and release.
 
 ### Multi-Monitor
 
