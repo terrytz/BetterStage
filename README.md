@@ -14,6 +14,10 @@
 
 ---
 
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/2e6d7d91-f1ba-4378-8070-7855646b6fbe" controls autoplay loop muted width="100%"></video>
+</p>
+
 ## The Problem
 
 You've got 20+ windows across 2-3 monitors. Four projects going at once. You're alt-tabbing through a graveyard of forgotten windows just to find the one you need.
