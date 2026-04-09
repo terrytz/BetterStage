@@ -36,9 +36,13 @@ BetterStage gives you **9 named stages** — workspaces that span every connecte
 
 ### Stages
 
-Your monitors are one workspace. "Frontend" on Stage 1, "Backend" on Stage 2, "Design" on Stage 3 — each with its own window layout across all screens. Switch with `Opt+1-9`, cycle with `Opt+Tab`, or scroll through with `Opt+Scroll`. Send any window to another stage with `Opt+Shift+1-9` without leaving your current context.
+Your monitors are one workspace. "Frontend" on Stage 1, "Backend" on Stage 2, "Design" on Stage 3 — each with its own window layout across all screens. Switch with `Opt+1-9`, cycle with `Opt+Tab`, or scroll through with `Opt+Scroll`. Send any window to another stage with `Opt+Shift+1-9` without leaving your current context. All stage switch and send hotkeys are fully customizable.
 
-Windows survive reboots. Stages have names you choose. Click an app in the Dock and BetterStage auto-switches to the right stage.
+Windows survive reboots. Stages have names you choose. Click an app in the Dock and BetterStage auto-switches to the right stage. Drag a window to the top edge of the screen to reveal the stages bar and drop it on a stage card to move it.
+
+### AI Staging
+
+Let AI organize your windows into stages. BetterStage sends your current window list and monitor layout to your AI provider of choice (OpenAI, Anthropic, or any OpenAI-compatible endpoint like Groq and OpenRouter), and the AI assigns each window to the most logical stage — with live streaming progress shown in an overlay.
 
 ### Snap Zones
 
@@ -46,15 +50,15 @@ Drag a window to the edge of your screen and pick from 14 snap zones — halves,
 
 ### Bento Box Tiling
 
-Toggle auto-tiling per stage and windows arrange themselves in a clean BSP grid. Open a new window and the layout adjusts. Close one and the others fill the gap. Drag to reorder with iOS-style expel/swap. A master window gets priority sizing while the rest stack alongside it.
+Toggle auto-tiling per stage and windows arrange themselves in a clean BSP grid. Open a new window and the layout adjusts. Close one and the others fill the gap. Drag to reorder with iOS-style expel/swap. A master window gets priority sizing while the rest stack alongside it. Pin any window in place with `Ctrl+Opt+P` — pinned windows stay put while the rest tile around them. Configure screen padding (uniform or per-side) to keep tiled windows away from screen edges.
 
 ### Snap Wheel
 
-Hold `Ctrl+Opt` on a title bar or middle-click anywhere to open a radial menu — snap zones, stage assignment, and tiling actions in one gesture. Pick a zone and release.
+Open a radial menu with customizable triggers (middle-click, `Ctrl+Opt`, any key combo, or even the Fn/Globe key) — snap zones, stage assignment, pin toggle, and tiling actions in one gesture. Pick a zone and release.
 
 ### Multi-Monitor
 
-Full support for 2, 3, or more displays. Portrait monitors get adapted snap zones. Pin a monitor to keep reference windows (Slack, docs, music) visible while other screens swap between stages. Exclude displays you don't want managed.
+Full support for 2, 3, or more displays — Intel and Apple Silicon. Portrait monitors get adapted snap zones. Pin a monitor to keep reference windows (Slack, docs, music) visible while other screens swap between stages. Monitor identity is tracked by serial number, so your pinned monitor settings survive unplug/replug and sleep/wake. Exclude displays you don't want managed.
 
 ### Keyboard-First
 
@@ -68,19 +72,22 @@ Every action has a shortcut. Every shortcut is customizable with conflict detect
 | Switch speed | <16ms, zero animation | Animated | 700ms freeze | Instant |
 | Keyboard shortcuts | Full, customizable | None | Limited | Full (config file) |
 | Named workspaces | Yes | No | No | No |
-| Auto-tiling | BSP with drag reorder | No | No | Yes |
+| AI-powered window organization | Yes | No | No | No |
+| Auto-tiling | BSP with drag reorder + pin | No | No | Yes |
 | Snap zones | 14 zones + radial wheel | No | No | No |
 | Max workspaces | 9 | 4 | 16 | Unlimited |
+| Intel + Apple Silicon | Both | Both | Both | Both |
 | Setup required | Install and go | Built-in | Built-in | SIP disable + config |
 | Permissions | Accessibility only | — | — | Accessibility + SIP |
 
 ## Technical Details
 
 - 100% native Swift and AppKit — no Electron, no web views
+- Universal binary — runs natively on both Apple Silicon and Intel Macs
 - Under 10MB, less than 1% idle CPU
 - No SIP disable required (unlike yabai and AeroSpace)
 - Only needs Accessibility permission — no Input Monitoring, no Screen Recording
-- No telemetry, no data collection, no network calls (except update checks and license validation)
+- No telemetry, no data collection, no network calls (except update checks, license validation, and AI Staging if you choose to use it)
 - macOS 14 Sonoma or later
 
 ## Pricing
