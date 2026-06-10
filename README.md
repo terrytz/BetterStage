@@ -80,7 +80,7 @@ Launch pricing may increase. Current pricing lives at [betterstage.app/pricing](
 ## Download
 
 - [Download BetterStage](https://betterstage.app/download/thanks)
-- [Direct DMG for v1.1.2](https://update.betterstage.app/BetterStage-1.1.2.dmg)
+- [Direct DMG for v1.1.3](https://update.betterstage.app/BetterStage-1.1.3.dmg)
 - [Release notes](CHANGELOG.md)
 
 ## Community

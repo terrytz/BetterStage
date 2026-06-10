@@ -2,6 +2,23 @@
 
 Public release notes for BetterStage. The latest download is served from https://betterstage.app/download/thanks; direct update artifacts are served from https://update.betterstage.app/.
 
+## v1.1.3 - June 2026
+
+Download: https://update.betterstage.app/BetterStage-1.1.3.dmg
+
+- New: Stage cards in the Stages Bar now show each stage's window mode — Native, Bento Box, or Tabbed Layout — for the monitor you're looking at, and they update live as you switch modes.
+- Fixed: Waking your Mac no longer rearranges your windows out from under you. Wake recovery was redesigned from the ground up: visible windows stay where they are, windows on your other stages quietly get their correct positions back the moment you switch to them, and a window that sleep moved to the wrong monitor is put back where it belongs.
+- Fixed: In Tabbed Layout, the tab you were working in stays the active tab across sleep — waking no longer switches your panes to a different window.
+- Fixed: The Stages Bar could stop appearing — by hot edge or keyboard shortcut — after connecting or disconnecting a display. BetterStage was mistaking a recycled display ID for an excluded monitor and hiding the bar on every screen; it now identifies monitors by their actual hardware, so the bar always shows where it should.
+- Fixed: A Pinned Display now stays pinned. Unplugging and replugging a monitor a few times could silently drop its pin, so it started joining stage switches again; BetterStage now keeps the pin attached to the right physical monitor across reconnects.
+- Fixed: An unresponsive app in a Tabbed Layout group no longer freezes the whole tab bar. Switching to a hung app's tab could briefly freeze the screen; now that tab simply fails to activate while every other tab and pane stays responsive.
+- Fixed: Tabbed Layout is steadier while you change modes. Applying a window mode to an empty stage no longer jumps you to another stage, switching one monitor out of Tabbed Layout no longer makes another monitor's tabs disappear, and opening the layout picker no longer hides your tabs while you choose.
+- Fixed: Rescue Windows now reaches windows that actually got stuck. The command used to skip windows stranded off-screen or off every display — exactly the ones worth rescuing. It now gathers every window from your current desktop onto the monitor you pick, including ones BetterStage had lost track of.
+- Fixed: Undo after a display change. A layout undo could silently do nothing once monitors were reconnected; it now follows your displays correctly.
+- Fixed: AI Staging is more resilient to unusual or truncated responses from your model, and the resize grid overlay now lines up with your safe-area padding.
+- Improved: Smoother window dragging and faster stage switching. Several hot paths now make far fewer redundant system calls, so dragging windows and switching stages feel lighter — and a slow or unresponsive app is far less likely to hold things up.
+- Fixed: A small memory leak when trackpad gesture settings were changed, and extra crash-proofing around the auto-updater.
+
 ## v1.1.2 - June 2026
 
 Download: https://update.betterstage.app/BetterStage-1.1.2.dmg
