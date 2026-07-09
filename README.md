@@ -21,7 +21,13 @@
 ---
 
 <p align="center">
-  <video src="https://github.com/user-attachments/assets/2e6d7d91-f1ba-4378-8070-7855646b6fbe" controls autoplay loop muted width="100%"></video>
+  <a href="https://update.betterstage.app/video/BetterStage-120-1080p.mp4">
+    <img src="https://update.betterstage.app/video/BetterStage-120-poster.jpg" width="100%" alt="Watch the latest BetterStage demo">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://update.betterstage.app/video/BetterStage-120-1080p.mp4">▶ Watch the latest BetterStage demo</a>
 </p>
 
 ## What BetterStage Does
@@ -88,7 +94,7 @@ Launch pricing may increase. Current pricing lives at [betterstage.app/pricing](
 ## Download
 
 - [Download BetterStage](https://betterstage.app/download/thanks)
-- [Direct DMG for v1.2.8](https://update.betterstage.app/BetterStage-1.2.8.dmg)
+- [Direct DMG (latest)](https://betterstage.app/api/download)
 - [Release notes](CHANGELOG.md)
 
 ### Homebrew
