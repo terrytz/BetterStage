@@ -80,8 +80,17 @@ Launch pricing may increase. Current pricing lives at [betterstage.app/pricing](
 ## Download
 
 - [Download BetterStage](https://betterstage.app/download/thanks)
-- [Direct DMG for v1.1.3](https://update.betterstage.app/BetterStage-1.1.3.dmg)
+- [Direct DMG for v1.2.8](https://update.betterstage.app/BetterStage-1.2.8.dmg)
 - [Release notes](CHANGELOG.md)
+
+### Homebrew
+
+```sh
+brew tap terrytz/betterstage https://github.com/terrytz/BetterStage
+brew install --cask betterstage
+```
+
+Upgrade later with `brew upgrade --cask betterstage`.
 
 ## Community
 

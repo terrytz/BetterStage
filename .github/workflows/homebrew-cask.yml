@@ -1,0 +1,46 @@
+name: Validate Homebrew cask
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/homebrew-cask.yml"
+      - "Casks/**"
+  pull_request:
+    paths:
+      - ".github/workflows/homebrew-cask.yml"
+      - "Casks/**"
+
+jobs:
+  cask:
+    runs-on: macos-15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Tap this checkout
+        run: brew tap terrytz/betterstage "$GITHUB_WORKSPACE"
+
+      - name: Check cask style
+        run: brew style --cask terrytz/betterstage/betterstage
+
+      - name: Audit cask
+        run: brew audit --cask --strict terrytz/betterstage/betterstage
+
+      - name: Check update feed
+        run: brew livecheck --cask terrytz/betterstage/betterstage
+
+      - name: Install cask
+        run: brew install --cask --appdir="$RUNNER_TEMP/apps" terrytz/betterstage/betterstage
+
+      - name: Verify application signature
+        run: |
+          codesign --verify --deep --strict --verbose=2 "$RUNNER_TEMP/apps/BetterStage.app"
+          spctl --assess --type execute --verbose=2 "$RUNNER_TEMP/apps/BetterStage.app"
