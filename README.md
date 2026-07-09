@@ -35,21 +35,26 @@ BetterStage is built for people who keep many projects, apps, chats, terminals, 
 - **Stages** - up to 9 named workspaces spanning every connected monitor. Switch with `Opt+1-9`, cycle with `Opt+Tab`, send windows with `Opt+Shift+1-9`, or drag a window to the Stages Bar.
 - **Window Modes** - choose per monitor per stage: macOS Native, Bento Box, or Tabbed Layout Mode.
 - **Bento Box** - automatic non-overlapping tiling with drag-to-resize, drop-to-swap, drop-on-edge insertion, pinning, gaps, padding, and retile.
-- **Tabbed Layout Mode** - saved pane layouts where multiple windows can share a pane as tabs. Presets include Split View, Top / Bottom, Focus + Stack, Four Corners, and custom layouts.
+- **Tabbed Layout Mode** - saved pane layouts where multiple windows can share a pane as tabs. Zoom a pane, split tabs into new panes, close tabs directly, or launch an installed app into a pane from its menu.
 - **Snap Zones** - 15 keyboard and drag zones for halves, thirds, two-thirds, quarters, and full-screen placement.
 - **Snap Wheel** - a configurable radial menu for snap zones, Window Modes, stage actions, Retile, AI Staging, and more. Supports keyboard, mouse, modifier, and 4/5-finger trackpad triggers.
 - **Pinned Displays** - keep selected monitors visible across all stages for chat, docs, music, dashboards, or reference windows.
+- **App Routing** - assign an app to a stage and monitor so its new windows open in the workspace where they belong.
 - **Keyboard-first control** - customizable shortcuts, conflict warnings, Standard and European keyboard layout presets, directional focus, scoped `Cmd+\`` cycling, and a searchable shortcut settings view.
 - **AI Staging** - describe the workspace you want in a floating chat panel. Mention apps, windows, stages, monitors, or Window Modes; review the proposed plan; refine it; apply; and undo the whole arrangement in one step.
-- **Window Rules** - save standing AI Staging instructions, edit them with the same mention chips, and preview the exact prompt sent to the model.
+- **Recipes** - save multiple sets of AI Staging instructions for different workflows, switch between them, duplicate or rename them, choose a default, and preview the exact prompt sent to the model.
 
 ## AI Staging
 
-AI Staging is bring-your-own-provider. BetterStage sends a structured window snapshot directly from your Mac to the AI provider you configure; BetterStage servers do not receive the AI Staging prompt or response.
+AI Staging supports three provider paths:
+
+- **BetterStage AI** - managed AI Staging with no API key or provider setup. This optional subscription routes the structured workspace prompt through BetterStage's service.
+- **Bring your own provider** - connect your own API key. The prompt is sent directly from your Mac to the provider you configure; BetterStage servers do not receive it.
+- **Run locally** - use Ollama, LM Studio, or another compatible local endpoint so the request stays on your Mac or local network.
 
 Current provider presets include OpenAI, Claude, Google Gemini, OpenRouter, Groq, Together AI, Mistral, xAI, DeepSeek, Moonshot/Kimi, Zhipu/GLM, Alibaba Qwen, MiniMax, Tencent Hunyuan, ByteDance Doubao, Xiaomi MiMo, StepFun, SiliconFlow, Novita AI, NVIDIA NIM, Hugging Face, Azure OpenAI, LM Studio, Ollama, Ollama Cloud, and Custom OpenAI-compatible endpoints.
 
-The current public AI prompt files are in [`prompt-template/`](prompt-template/). They mirror the current app prompt shape: a short system message plus a dynamically rendered chat user prompt with workspace JSON, entity glossary, saved Window Rules, chat history, and action-envelope instructions.
+The current public AI prompt files are in [`prompt-template/`](prompt-template/). They mirror the current app prompt shape: a short system message plus a dynamically rendered chat user prompt with workspace JSON, entity glossary, the selected Recipe, chat history, and action-envelope instructions.
 
 ## Pricing
 
@@ -58,13 +63,16 @@ Every download includes a 10-day Pro trial. If you do not upgrade, BetterStage f
 | Tier | Includes |
 | --- | --- |
 | Free | 3 stages, Snap Zones, Snap Wheel, keyboard shortcuts, multi-monitor support, 1 device |
-| Pro | 9 stages, AI Staging, Bento Box, Tabbed Layout Mode, Pinned Displays, all future updates |
+| Pro | 9 stages, bring-your-own-provider AI Staging, Bento Box, Tabbed Layout Mode, Pinned Displays, all future updates |
+| BetterStage AI | Everything in Pro plus managed AI Staging, 200 credits per month, up to 3 devices |
 
 Pro is lifetime-only:
 
 - Pro · 1 Device: `$19.99`
 - Pro · 3 Devices: `$39.99`
 - Pro · 5 Devices: `$49.99`
+
+BetterStage AI is a separate optional subscription: `$4.99/month` or `$39/year`. It is not required to use AI Staging with your own provider or a local model.
 
 Launch pricing may increase. Current pricing lives at [betterstage.app/pricing](https://betterstage.app/pricing).
 
@@ -74,7 +82,7 @@ Launch pricing may increase. Current pricing lives at [betterstage.app/pricing](
 - Universal release build for Apple Silicon and Intel Macs.
 - Distributed as a signed DMG; updates use Sparkle from `https://update.betterstage.app/appcast.xml`.
 - Uses standard macOS Accessibility APIs. No SIP disable, Input Monitoring, or Screen Recording permission is required.
-- No app telemetry or in-app usage analytics. Network access is used for update checks, license/account validation, optional onboarding media, optional model-list fetching, and optional AI Staging requests you configure.
+- No app telemetry or in-app usage analytics. Network access is used for update checks, license/account validation, optional onboarding media, optional model-list fetching, and AI Staging requests through either your configured provider or the managed BetterStage AI service.
 - Source code is private; this public repository is the community hub, changelog, issue tracker, and prompt-transparency surface.
 
 ## Download

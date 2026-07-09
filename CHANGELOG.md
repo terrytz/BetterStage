@@ -2,6 +2,121 @@
 
 Public release notes for BetterStage. The latest download is served from https://betterstage.app/download/thanks; direct update artifacts are served from https://update.betterstage.app/.
 
+## v1.2.8 - July 2026
+
+Download: https://update.betterstage.app/BetterStage-1.2.8.dmg
+
+- New: In Tabbed Layout, panes now have a right-click context menu, and you can launch an app directly into a pane. Use the new pane plus button or right-click a pane, search your installed apps, and BetterStage will place the new window in that pane.
+- New: AI Staging now supports multiple saved Recipes. Create different Recipes for different workflows, switch between them, duplicate or rename them, and choose which one should be the default.
+- New: Hidden Window Parking now includes an optional faster parking mode for multi-monitor setups, with clearer Settings guidance and a monitor arrangement illustration.
+- New: The Stages Bar top-edge trigger can now optionally ignore the built-in Mac display notch area, while still working on the rest of the top edge.
+- Improved: The AI Staging Recipe editor is easier to find and manage. Selecting a Recipe now reliably updates the editor, Arrange action, and prompt preview.
+- Improved: Settings now opens on the display where your pointer is, making it easier to use on multi-monitor setups.
+
+## v1.2.7 - July 2026
+
+Download: https://update.betterstage.app/BetterStage-1.2.7.dmg
+
+- Fixed: Exiting Zoom Pane in Tabbed Layout no longer freezes the tab bar while BetterStage waits for app window frame writes.
+- Fixed: Tabs switched while a pane is zoomed now return to their normal hidden pane frames after unzooming instead of remaining zoom-sized behind the active window.
+- Fixed: Native and Bento Box modes no longer capture short-lived browser and app controls as manageable windows, preventing popups such as Chrome downloads/profile menus, password-manager menus, and Excel filters from disappearing immediately.
+- Fixed: BetterStage helper panels and overlays now opt out of third-party screen/window capture, reducing interference with app-window sharing in Zoom.
+
+## v1.2.6 - July 2026
+
+Download: https://update.betterstage.app/BetterStage-1.2.6.dmg
+
+- New: In Tabbed Layout, hover any tab to see its full title and app name in a tooltip — especially useful when tab names are cut off.
+- New: In Tabbed Layout, click the close button (X) on any tab to close it directly, just like a browser tab.
+- New: In Tabbed Layout, choose Chrome-style (compact, equal-width) or Safari-style (last tab stretches) tab widths in Settings.
+- Improved: Closing a tab in Tabbed Layout now focuses the tab to its right (or left if it was the last tab), matching Chrome behavior — instead of always jumping to the leftmost tab.
+- Improved: BetterStage no longer shows recovery prompts after sleep/wake or when a display is disconnected. The previous monitor-recovery system has been removed and a brand new, more robust recovery engine is being built for the next release.
+- Improved: The Settings window now shows a Dock icon while open so you can switch to it with Cmd-Tab like a normal app.
+- Improved: Factory reset now preserves your device verification key — your license activation survives resetting all settings.
+- Improved: Finder and System Preferences are no longer excluded from stage tracking by default. Add exclusions in Settings > Excluded Apps.
+- Improved: The first-run welcome window no longer floats above System Settings permission dialogs, so the Accessibility grant button is always visible.
+- Improved: The Displays settings pane has been rewritten with clearer labels and no longer includes Display Setup Profiles — automatic stage restoration on monitor reconnection will be rebuilt for a future release.
+- Improved: App activation (Cmd-Tab, Dock click, notification click) is now conservatively routed — if the app already has a visible window on your current stage, activation stays there.
+- Improved: In Tabbed Layout, clicking a tab in the same zoomed pane now keeps the pane zoomed — zoom only exits when you click a tab in a different pane.
+- Fixed: Entering or exiting native fullscreen in Chrome no longer causes hidden Chrome windows to appear on the wrong monitor. Hidden windows stay at the hide corner in all tiling modes (Tabbed Layout, Bento Box, and native).
+- Fixed: Closing a window in Tabbed Layout or Bento Box now immediately retiles and switches tabs instead of leaving an empty pane or grid cell for several seconds — most noticeable with Electron apps (WeChat, Telegram, 抖音).
+- Fixed: Closing a non-selected Tabbed Layout tab now disappears from the tab bar instantly instead of waiting for the next window scan cycle.
+- Fixed: When a monitor is unplugged, windows moved to another display now snap into their panes or tiled positions immediately instead of floating off until you nudge them.
+- Fixed: Opening or dismissing the Snap Wheel no longer makes Tabbed Layout panes flash off momentarily.
+- Fixed: In Tabbed Layout, clicking a window no longer pulls a hidden same-app sibling (e.g. another Chrome window) to the front — on the same monitor or across monitors.
+- Fixed: Activating a Tabbed Layout pane now focuses the correct window, and oversized pane title-bar drags work as expected.
+- Fixed: Built-in trackpad Snap Wheel and gesture triggers now handle duplicate touch contacts from macOS reliably.
+- Fixed: Trackpad system navigation swipes (Mission Control, Spaces) no longer interfere with Snap Wheel triggers.
+- Fixed: Terminal and Ghostty tabs no longer get temporarily orphaned during rapid tab switching — the pane now tracks tabs by stable slot identity instead of window ID.
+- Fixed: Un-zooming a Tabbed Layout pane now actually shrinks it back to its pane frame instead of staying stuck at the monitor-sized zoom.
+- Fixed: Releasing a dragged or resized window in Tabbed Layout now reliably snaps back to its pane on every release path.
+- Fixed: Hold-mode keyboard shortcuts now correctly keep the Snap Wheel open while held and commit on release, instead of only firing on press.
+- Fixed: The Snap Wheel target highlight now disappears instantly when you commit an action or dismiss the wheel.
+- Fixed: Dragging a window by its title bar now works even when the window is not in focus.
+- Fixed: Activating a window on a pinned monitor no longer unexpectedly switches the stage on your other monitors.
+- Fixed: Stage switching via Dock click or Cmd-Tab works reliably right after exiting native fullscreen, instead of being ignored for up to 1.5 seconds.
+- Fixed: Users upgrading from trial to paid after a factory reset can now successfully re-activate instead of being permanently locked out.
+- Fixed: AI Staging can be opened directly from the menu bar or hotkey — license and configuration checks now happen inside the panel instead of blocking with a toast popup.
+
+## v1.2.5 - July 2026
+
+Download: https://update.betterstage.app/BetterStage-1.2.5.dmg
+
+- Improved: BetterStage now shows Stage Manager compatibility guidance during first-run setup, with a quick button to open the right macOS settings page.
+- Improved: Option-Tab stage cycling now previews stages as you move through them, making it easier to pick the right workspace before switching.
+- Fixed: Built-in MacBook trackpads now recognize the four-finger Snap Wheel trigger much more reliably, matching the behavior of external Magic Trackpads.
+- Fixed: Tabbed Layout pane chrome now gets out of the way during Show Desktop, Mission Control, App Exposé, wallpaper clicks, trackpad swipes, and hot corners, so desktop widgets and system overviews are no longer blocked.
+- Fixed: Terminal and iTerm windows in Tabbed Layout stay steadier while resizing or activating, reducing pane height jitter and slow-tab visual glitches.
+
+## v1.2.2 - July 2026
+
+Download: https://update.betterstage.app/BetterStage-1.2.2.dmg
+
+- New: App Routing. You can assign an app to a stage so new windows from that app always open there. Pick any stage 1–9 — if it doesn't exist yet BetterStage creates it. Works per-monitor too, so Safari always opens on your right display. Find it in Settings → App Routing. (Pro feature.)
+- New: In Tabbed Layout, right‑click a tab and choose Split Right or Split Below to move it into its own pane.
+- Improved: Stage switching is faster, especially with many windows open.
+- Improved: Option‑scroll stage switching is now a toggle in Settings → General.
+- Fixed: In Tabbed Layout, closing or opening a Chrome tab no longer switches the active pane.
+- Fixed: Windows that disappeared after your Mac woke from sleep are now recovered to the right stage and monitor.
+- Updated: App and web icons with a new cleaner look.
+
+## v1.2.1 - June 2026
+
+Download: https://update.betterstage.app/BetterStage-1.2.1.dmg
+
+- New: Activate Pro on a new Mac in one click. Open your account at betterstage.app and click 'Activate on this Mac' — BetterStage launches and turns on Pro for you, with no license key to copy or paste.
+- Fixed: A handful of smaller bugs squashed and overall stability improved.
+
+## v1.2.0 - June 2026
+
+Download: https://update.betterstage.app/BetterStage-1.2.0.dmg
+
+- New: Introducing BetterStage AI — the no-setup way to use AI Staging. Describe your workspace in plain English and it arranges your apps across every monitor for you, with no API key to bring or configure. It's an optional subscription; you can still connect your own AI provider on any Pro license.
+- New: In Tabbed Layout you can now zoom a single pane to fill the whole screen, then restore your full layout in one click — from the pane's menu or the snap wheel. A one-time tip shows you how to bring the panes back.
+- New: Bento Box's window fill is now reversible — enlarge a window to take over its screen, then restore it right back to where it was. (The snap wheel's 'Maximize' action is now called 'Fill'.)
+- Improved: AI Staging is much easier to use — describe your projects and stages in a plain-English Recipe (with a ready-made starter template), preview exactly what will happen before anything moves, and let BetterStage pick the best window mode for each monitor by grouping your apps and choosing Tabbed Layout or Bento Box per screen.
+- Improved: Settings has a cleaner, card-based layout with a Window Modes overview, so Native, Bento Box, and Tabbed Layout are clear at a glance.
+- Performance: Window dragging is smooth again. Moving a window used to stutter and lag — now windows glide fluidly under your cursor.
+- Fixed: In Tabbed Layout, the tab bar no longer freezes when a background app is busy (for example, an installer copying files) — your tabs and panes stay clickable while that app catches up.
+- Fixed: Minimized windows now stay minimized when you switch stages and come back.
+- Fixed: Windows stranded off-screen after your Mac wakes or your monitors change are recovered to the correct stage and monitor.
+- Fixed: Find bars and pop-up panels no longer get dragged around or teleported along with your windows.
+- Fixed: After sending an app to another stage, clicking its Dock icon now switches you to that stage.
+- Fixed: 'Fill' no longer kicks a monitor out of Tabbed Layout into Bento Box.
+
+## v1.1.4 - June 2026
+
+Download: https://update.betterstage.app/BetterStage-1.1.4.dmg
+
+- Fixed: Terminal windows no longer flicker in Tabbed Layout — they now sit still in their pane like any other app.
+- Improved: Resizing Tabbed Layout panes is much smoother. The divider follows your cursor in real time as you drag, your windows drop into their final spots the instant you let go, and the old flicker, double-flash, and brief pause at the end of a drag are gone. Dragging a divider all the way to an edge no longer flashes a duplicate handle elsewhere on screen.
+- Fixed: Drag a divider past an app's minimum size and the pane now springs back to that app's real limit when you release, so windows never overlap their neighbors. BetterStage learns each app's true minimum as you use it — and unlearns it if the app later goes smaller.
+- Fixed: A pane's tab bar and its content now act as a single unit — they no longer split into two separate windows in Mission Control, and the tab bar can't get covered up and become unclickable.
+- Fixed: Tabs are easier to hit — clicking near the edge of a tab now selects the right one.
+- Fixed: Dragging a pane divider no longer switches which tab is active.
+- Fixed: Bento Box dividers no longer get stuck after you've been resizing panes in Tabbed Layout.
+- Fixed: Switching stages in the middle of a divider drag no longer carries the old layout into the new stage.
+
 ## v1.1.3 - June 2026
 
 Download: https://update.betterstage.app/BetterStage-1.1.3.dmg
