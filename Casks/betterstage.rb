@@ -13,7 +13,8 @@ cask "betterstage" do
   end
 
   auto_updates true
-  depends_on macos: :sonoma
+  # Keep the comparison form for older Homebrew clients running newer macOS releases.
+  depends_on macos: ">= :sonoma"
 
   app "BetterStage.app"
 

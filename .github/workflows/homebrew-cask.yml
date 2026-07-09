@@ -29,10 +29,10 @@ jobs:
         run: brew tap terrytz/betterstage "$GITHUB_WORKSPACE"
 
       - name: Check cask style
-        run: brew style --cask terrytz/betterstage/betterstage
+        run: brew style --cask --except-cops Homebrew/OSDependsOn terrytz/betterstage/betterstage
 
       - name: Audit cask
-        run: brew audit --cask --strict terrytz/betterstage/betterstage
+        run: brew audit --cask --strict --except-cops Homebrew/OSDependsOn terrytz/betterstage/betterstage
 
       - name: Check update feed
         run: brew livecheck --cask terrytz/betterstage/betterstage
