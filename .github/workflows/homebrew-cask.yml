@@ -32,7 +32,7 @@ jobs:
         run: brew style --cask --except-cops Homebrew/OSDependsOn terrytz/betterstage/betterstage
 
       - name: Audit cask
-        run: brew audit --cask --strict --except-cops Homebrew/OSDependsOn terrytz/betterstage/betterstage
+        run: brew audit --cask --strict --skip-style terrytz/betterstage/betterstage
 
       - name: Check update feed
         run: brew livecheck --cask terrytz/betterstage/betterstage
@@ -44,3 +44,6 @@ jobs:
         run: |
           codesign --verify --deep --strict --verbose=2 "$RUNNER_TEMP/apps/BetterStage.app"
           spctl --assess --type execute --verbose=2 "$RUNNER_TEMP/apps/BetterStage.app"
+
+      - name: Uninstall cask
+        run: brew uninstall --cask betterstage
