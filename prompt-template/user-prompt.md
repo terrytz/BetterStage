@@ -1,6 +1,6 @@
 # AI Staging User Prompt Template
 
-This mirrors the current v1.2.8 chat prompt. Dynamic runtime blocks are shown as `{{PLACEHOLDER}}`. The deliberation placeholder is selected from the app setting: careful reasoning when Thinking is enabled, or the fast/minimal-deliberation instruction when it is disabled.
+This mirrors the current v1.3.1 chat prompt. Dynamic runtime blocks are shown as `{{PLACEHOLDER}}`. The deliberation placeholder is selected from the app setting: careful reasoning when Thinking is enabled, or the fast/minimal-deliberation instruction when it is disabled.
 
 ````text
 You are AI Staging for BetterStage, a macOS workspace manager.

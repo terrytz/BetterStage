@@ -36,9 +36,14 @@ BetterStage is a native macOS workspace manager. A stage is a named workspace th
 
 BetterStage is built for people who keep many projects, apps, chats, terminals, browsers, documents, and monitors open all day.
 
+Workspace Continuity protects that setup automatically after BetterStage restarts, your Mac wakes, or displays reconnect. Pro users can also save named Workspaces and load them on demand.
+
 ## Core Features
 
 - **Stages** - up to 9 named workspaces spanning every connected monitor. Switch with `Opt+1-9`, cycle with `Opt+Tab`, send windows with `Opt+Shift+1-9`, or drag a window to the Stages Bar.
+- **Workspace Continuity** - automatically recover stages, window positions, monitor assignments, and supported layouts after restart, wake, or display changes. Available on the Free tier.
+- **Saved Workspaces** - save and load named multi-monitor arrangements with visual previews, Window Modes, Tabbed Layout panes, and optional app reopening. Pro feature.
+- **Offline Display Shelf** - when a display is missing, keep its workspace safely preserved until the display returns or you explicitly move it elsewhere.
 - **Window Modes** - choose per monitor per stage: macOS Native, Bento Box, or Tabbed Layout Mode.
 - **Bento Box** - automatic non-overlapping tiling with drag-to-resize, drop-to-swap, drop-on-edge insertion, pinning, gaps, padding, and retile.
 - **Tabbed Layout Mode** - saved pane layouts where multiple windows can share a pane as tabs. Zoom a pane, split tabs into new panes, close tabs directly, or launch an installed app into a pane from its menu.
@@ -47,6 +52,7 @@ BetterStage is built for people who keep many projects, apps, chats, terminals, 
 - **Pinned Displays** - keep selected monitors visible across all stages for chat, docs, music, dashboards, or reference windows.
 - **App Routing** - assign an app to a stage and monitor so its new windows open in the workspace where they belong.
 - **Keyboard-first control** - customizable shortcuts, conflict warnings, Standard and European keyboard layout presets, directional focus, scoped `Cmd+\`` cycling, and a searchable shortcut settings view.
+- **Customizable menu bar** - choose and reorder the BetterStage logo, Stage index, total window count, Stage name, and Window Modes, with three Stage index styles.
 - **AI Staging** - describe the workspace you want in a floating chat panel. Mention apps, windows, stages, monitors, or Window Modes; review the proposed plan; refine it; apply; and undo the whole arrangement in one step.
 - **Recipes** - save multiple sets of AI Staging instructions for different workflows, switch between them, duplicate or rename them, choose a default, and preview the exact prompt sent to the model.
 
@@ -68,8 +74,8 @@ Every download includes a 10-day Pro trial. If you do not upgrade, BetterStage f
 
 | Tier | Includes |
 | --- | --- |
-| Free | 3 stages, Snap Zones, Snap Wheel, keyboard shortcuts, multi-monitor support, 1 device |
-| Pro | 9 stages, bring-your-own-provider AI Staging, Bento Box, Tabbed Layout Mode, Pinned Displays, all future updates |
+| Free | 3 stages, automatic Workspace Continuity, Snap Zones, Snap Wheel, keyboard shortcuts, multi-monitor support, 1 device |
+| Pro | 9 stages, Saved Workspaces, bring-your-own-provider AI Staging, Bento Box, Tabbed Layout Mode, Pinned Displays, all future updates |
 | BetterStage AI | Everything in Pro plus managed AI Staging, 200 credits per month, up to 3 devices |
 
 Pro is lifetime-only:

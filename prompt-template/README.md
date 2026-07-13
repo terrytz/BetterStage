@@ -1,6 +1,6 @@
 # AI Staging Prompt
 
-These files mirror the current BetterStage AI Staging chat path in app version 1.2.8.
+These files mirror the current BetterStage AI Staging chat path in app version 1.3.1.
 
 The app no longer uses the older public `instruction.md` / `pipeline.md` split. The production chat panel sends:
 

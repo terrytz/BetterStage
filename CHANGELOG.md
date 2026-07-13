@@ -2,6 +2,45 @@
 
 Public release notes for BetterStage. The latest download is served from https://betterstage.app/download/thanks; direct update artifacts are served from https://update.betterstage.app/.
 
+## v1.3.1 - July 2026
+
+Download: https://update.betterstage.app/BetterStage-1.3.1.dmg
+
+- New: Customize the menu bar in Settings > General: choose and reorder the BetterStage logo, Stage index, total window count, Stage name, and Window Modes, with three Stage index styles.
+- Improved: Menu bar status items now share a consistent compact design, and Window Modes summarizes every connected display, including Pinned Displays.
+- Fixed: Closing Electron windows now removes ghost tabs and stale Bento Box tiles promptly, then reflows the layout even when macOS keeps old window records around.
+- Fixed: Resizing a Bento Box window from macOS's thin outer window border now reliably starts linked resizing.
+- Fixed: Bento Box snap actions now place shrinking windows correctly against the right edge instead of leaving them offset.
+- Fixed: BetterStage's rounded status and loading toasts no longer show square white corners.
+
+## v1.3.0 - July 2026
+
+Download: https://update.betterstage.app/BetterStage-1.3.0.dmg
+
+- New: Workspace Continuity automatically restores your stages, window positions, and layouts after restarting your Mac, waking from sleep, or reconnecting displays.
+- New: When a display is disconnected, its windows are kept safely in the Offline Display Shelf until the display returns or you choose to move them elsewhere.
+- New: Pro users can save and load named Workspaces, including multi-monitor stages, window modes, Tabbed Layout panes, and apps that need to be reopened.
+- New: Save and Load Workspace actions are available from the menu bar and Snap Wheel, with visual previews and clear handling for missing displays.
+- New: A dedicated Workspaces settings page brings automatic recovery and Saved Workspace controls together in one place.
+- Improved: The Stages Bar now shows app icons and window counts for each individual monitor and adapts correctly when a display rotates.
+- Improved: Retile now repairs the visible desktop more reliably, including native stacking and resize-handle interactions.
+- Fixed: Workspace loading now remains atomic and shows one continuous progress indicator while apps and windows are restored.
+- Fixed: Tabbed Layout keeps inactive tabs parked correctly during stage switches and restores tabs reliably after Dock activation.
+
+## v1.2.9 - July 2026
+
+Download: https://update.betterstage.app/BetterStage-1.2.9.dmg
+
+- New: Choose System, Light, or Dark appearance across Settings, AI Staging, and onboarding.
+- New: BetterStage can now be installed with Homebrew using the commands available on the website.
+- New: In Tabbed Layout, hover over a tab while dragging a file from Finder to reveal its window before dropping the file.
+- New: The Tabbed Layout preset editor now opens in a focused sheet, with a Balance Panes action for evenly distributing complex layouts.
+- Improved: Settings has been redesigned with clearer navigation, searchable preferences, better resizing, and a more native macOS layout.
+- Improved: Apps launched directly into a Tabbed Layout pane now expand the pane when needed to accommodate the app's minimum window size.
+- Fixed: Launching an app into a Tabbed Layout pane is more reliable, including apps with delayed or existing windows.
+- Fixed: BetterStage no longer becomes stuck behind unexpected login-keychain password prompts when loading saved credentials.
+- Fixed: Double-clicking a window title bar in Tabbed Layout now consistently returns the window to its pane instead of leaving it maximized.
+
 ## v1.2.8 - July 2026
 
 Download: https://update.betterstage.app/BetterStage-1.2.8.dmg
