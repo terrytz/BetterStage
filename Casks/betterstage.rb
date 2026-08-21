@@ -1,6 +1,6 @@
 cask "betterstage" do
-  version "1.3.8"
-  sha256 "5985b0c036f3e7e49df61a7ecdf55546619151cff301ef809511a64d2997b748"
+  version "1.3.9"
+  sha256 "8ec58f5820f298c7554163bf9b4ba4e1e5ad1e5dfa6d6d9c24254c4d1429df34"
 
   url "https://update.betterstage.app/BetterStage-#{version}.dmg"
   name "BetterStage"
