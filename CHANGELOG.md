@@ -2,6 +2,252 @@
 
 Public release notes for BetterStage. The latest download is served from https://betterstage.app/download/thanks; direct update artifacts are served from https://update.betterstage.app/.
 
+## v2.0.4 - September 2026
+
+Download: https://update.betterstage.app/BetterStage-2.0.4-build-2.0.4901.dmg
+
+- Improved: Wake recovery avoids unnecessarily revealing hidden apps when their tracked windows are still intact.
+- Fixed: Temporary app responsiveness issues could remove live windows from their TabStack panes or disrupt their assignments.
+- Fixed: Unsolicited window movements could change pane or display ownership without a deliberate drag.
+- Fixed: Delayed window updates and workspace recovery could overwrite newer tab selections or manual window changes.
+- Fixed: Closed Firefox windows could remain tracked, including in Native mode and when floating.
+- Fixed: Displays now use TabStack when legacy Bento Box is disabled, while preserving layout proportions and saved panes for late-starting windows.
+- Fixed: Restarting BetterStage could show an unnecessary workspace recovery prompt, and longer recovery messages could be clipped.
+- Fixed: Explicit license verification can recover blocked secure storage instead of leaving activation stuck.
+- Fixed: Pro trial eligibility and expiration checks now reject repeat trials and invalid expiry data.
+- Fixed: Missed Finder/app windows and stale closed-window tracking on pinned displays.
+- Fixed: Recovery undoing pinned-window transfers or manual layout changes.
+- Fixed: Automatic license recovery after temporary logout storage failures.
+- Fixed: Recovery notifications remaining visible too long.
+- Fixed: False Accessibility-permission-loss alerts.
+
+## v2.0.3 - September 2026
+
+Download: https://update.betterstage.app/BetterStage-2.0.3.dmg
+
+- New: Customize TabStack tab height, active and inactive text colors, and empty-pane close button visibility.
+- New: Assign a keyboard shortcut to load a specific Saved Workspace directly.
+- New: Clean Load optionally quits apps and removes Stages outside the selected Workspace before loading it. Apps are never force-quit, loading stops if an app stays open, and the option resets after each use.
+- New: Restart BetterStage directly from the menu bar.
+- Improved: Tab labels have clearer automatic contrast, and tab icons, text, and empty-pane close buttons stay aligned as you adjust tab height. Tab Appearance also has its own Reset to Defaults button.
+- Improved: When a Saved Workspace includes disconnected displays, choose a connected destination and create Stages or merge its windows. Matching saved layouts take priority, and exceeding the Stage limit offers a Merge option.
+- Improved: Workspace previews show each display’s saved Window Mode, and loading skips empty saved Stages.
+- Improved: Applying the default layout automatically when entering TabStack is now opt-in. Existing choices are preserved.
+- Fixed: TabStack default layout controls remain available regardless of the default Window Mode. Choosing a layout no longer changes that mode, and switching modes preserves your chosen preset.
+- Fixed: Changing appearance sliders could trigger unwanted resize previews.
+- Fixed: Splitting panes could incorrectly enlarge their minimum size, distort the split, and leave panes too small to accept further drops.
+- Fixed: Rapid tab switching across panes could leave previous tabs visible or delay activation. Restored same-app windows now retain the intended focus more reliably.
+- Fixed: Stale close observations could remove live windows from their TabStack panes.
+- Fixed: Apps launched into a specific pane could be assigned elsewhere during window reconciliation.
+- Fixed: Workspace loading could miss app windows, lose pane assignments, or stop after Clean Load quit an app. Unavailable apps now produce a final result instead of leaving loading busy, and cancelling a destination dialog no longer shows a misleading error.
+- Fixed: Settings backups now include missing App Exceptions, window rules, display preferences, and Workspace shortcuts, while preserving imported exception choices.
+- Fixed: Reset All Settings now clears saved rules and custom TabStack layouts, refreshes App Exceptions, and restores the complete Comfortable appearance preset while keeping Stages, windows, credentials, Saved Workspaces, and saved Custom Actions.
+- Fixed: Snap Wheel shows the correct display Window Mode, enables cardinal pane moves only when a pane exists in that direction, and keeps layout commands available over empty panes without targeting their controls as windows.
+
+## v2.0.2 - September 2026
+
+Download: https://update.betterstage.app/BetterStage-2.0.2.dmg
+
+- Fixed: Snap Wheel could show 'No window targeted' over ordinary app windows, disabling snapping and moving windows to another Stage.
+
+## v2.0.1 - September 2026
+
+Download: https://update.betterstage.app/BetterStage-2.0.1.dmg
+
+- New: Some apps use unusual windows, such as floating tool panels or custom interfaces, that automatic detection may not handle as expected. You can now choose Automatic, Manage in Layout, or Keep Floating for individual windows, and save rules so similar windows are handled the way you want next time.
+- New: Adjust TabStack Split drop zones with a live preview, or disable Split and Swap drop zones separately.
+- New: Eligible devices can try Pro features for 15 minutes once every 24 hours, with a visible countdown.
+- New: Browse the website's how-to guides and video tutorials for common BetterStage tasks.
+- Improved: Deprecated Offline Display Shelf in favor of simpler, faster display recovery. Windows from disconnected displays automatically move to the remaining displays and join their TabStack panes. When a display reconnects, choose Restore or Keep Current Layout in a nonblocking dialog centered on the display containing your pointer.
+- Improved: Disabled Snap Wheel actions explain why they are unavailable, and license recovery shows clearer progress with less intrusive warnings.
+- Improved: When you close, move, or float the selected tab, TabStack returns to the most recently used remaining tab in that pane.
+- Improved: Reduced background window scanning and made saving Stage changes less disruptive.
+- Fixed: Dragging tabs between panes now works across tab bars, including dragging a tab out horizontally and dropping it onto another pane's tab bar to join it.
+- Fixed: Closing a floating window no longer unnecessarily rearranges other windows or resets their pane selection or zoom.
+- Fixed: Visible windows from apps excluded from Staging are brought back in front after Stage switches, without restoring minimized windows or unhiding apps.
+- Fixed: New window moves and layout changes cancel outdated placement operations, preventing delayed work from moving windows back.
+- Fixed: Reconnecting displays could leave TabStack tabs missing or covered until you switched Stages.
+- Fixed: Keyboard snapping now keeps ordinary snap behavior for floating windows and apps excluded from Staging.
+- Fixed: When an app has windows on multiple Stages, opening or closing one could unexpectedly switch you to another Stage or select the wrong tab. BetterStage now keeps you on the intended Stage and preserves the selected tabs.
+- Fixed: Automatic workspace recovery matches windows more reliably, including multiple windows from the same app with identical titles.
+- Fixed: The menu-bar indicator could fail to appear during startup, and Stage dialogs could conflict with open menus.
+
+## v2.0.0 - September 2026
+
+Download: https://update.betterstage.app/BetterStage-2.0.0.dmg
+
+- New: Introducing TabStack, the unified successor to Bento Box and Tabbed Layout. Split panes, join windows as tabs, swap windows, move complete tab stacks, and reorganize layouts directly.
+- New: Choose how TabStack starts, where new windows appear, how panes and tab bars look, and whether empty panes remain. Bento Box stays available as Bento Box (Legacy).
+- New: Settings has been redesigned around General, Stages, Window Modes, Workspaces, Controls, Automation, and System, with the installed BetterStage version always visible.
+- New: Custom Actions (Experimental) for the Snap Wheel support Open Application, Open File, Run Shortcut, and Run Command, with custom SF Symbol icons and user-created submenus.
+- New: App Routing can match both application and window title, allowing different windows from the same app to open on different Stages.
+- New: Export and import portable Settings backups, including preferences, shortcuts, App Routing rules, AI Recipes, Snap Wheel configuration, and custom TabStack layouts.
+- New: Snap Wheel includes Center for placing a window at half-screen size in the middle of the display, plus Float App for keeping the targeted app outside managed layouts.
+- Improved: Reflow as Grid turns the current TabStack panes into a balanced grid from the Snap Wheel or a shortcut.
+- Improved: TabStack Layout Styles provide Comfortable, Compact, and Custom starting points while keeping screen padding, pane gaps, tab bars, and pane appearance adjustable.
+- Improved: Dragging a divider resizes only the panes beside it, and separate rows or columns can retain independent divider positions.
+- Improved: Explicit Active, Adjacent, and Own Pane new-window rules now follow the active TabStack pane and display even when Accessibility focus information arrives late.
+- Improved: Saved Workspace previews remain readable with many window groups, show accurate pane structure, and restore slow or delayed applications with clearer progress.
+- Improved: Save Workspace and Load Workspace can now be assigned keyboard, mouse, or trackpad shortcuts.
+- Improved: Snap Wheel targeting, labels, tooltips, submenu clicks, and window actions are clearer and more dependable.
+- Improved: Onboarding is draggable, always provides a close button, shows Pro requirements inline, and skips the Stage Manager step when Stage Manager is already disabled.
+- Improved: BetterStage can follow an activated window to its Stage, while menus, dropdowns, window dragging, and Settings interactions perform less unnecessary layout work.
+- Fixed: TabStack balancing produces evenly sized panes and consistent internal gaps without adding unintended outer padding.
+- Fixed: Floating secondary windows, Finder utility windows, and application-managed auxiliary windows remain outside TabStack instead of occupying or displacing panes.
+- Fixed: New Safari, Chrome, Firefox, Electron, Finder, and other app windows are discovered and placed more reliably, including windows launched directly into a TabStack pane.
+- Fixed: Snap Wheel clicks take precedence over hover grace, target the correct managed or floating window, and no longer trigger unintended Stage Bar drops.
+- Fixed: Revoking Accessibility no longer leaves BetterStage holding keyboard or pointer input or continuing window operations while permission checks are blocked.
+- Fixed: Saved Workspaces coordinate app launches and window creation without duplicating windows, losing pane assignments, or finishing before delayed windows arrive.
+- Fixed: Stage switching and startup recovery preserve focus, visibility, pane membership, selected tabs, and intended window placement more reliably.
+- Fixed: Login-time Keychain delays no longer temporarily downgrade a valid paid installation and disrupt its saved Stages or Window Modes.
+- Fixed: Device limits are enforced independently for each license key instead of being pooled across licenses under the same account.
+- Fixed: Empty panes collapse consistently when Keep empty pane after moving or removing its last window is disabled.
+
+## v1.3.13 - August 2026
+
+Download: https://update.betterstage.app/BetterStage-1.3.13.dmg
+
+- Fixed: Offline Display windows now appear when you choose Use Temporarily, stop reserving empty Bento slots on connected displays, and automatically return and re-tile when their display reconnects.
+- Fixed: When Workspace Continuity is protecting a disconnected display, new and closed windows on connected displays keep joining and leaving their current layouts instead of creating missing windows or ghost tabs.
+- Fixed: Saved Workspace loading no longer creates extra app windows or reports items missing after delayed apps finish reopening; repeated loads also clear stale same-title membership.
+- Fixed: Saved Workspace windows for a disconnected display keep their saved display ownership instead of appearing on an active Stage or a different Pinned Display when macOS reuses a display ID.
+- Fixed: Loading a Saved Workspace from Settings now restores the live workspace instead of using an empty startup context.
+- Fixed: Divider resizing in a Pinned Display’s Bento Box no longer snaps back after release when Ghost Frame Preview is enabled.
+- Fixed: AI Staging opens with its Recipe editor ready for typing, including when reopening the panel.
+- Fixed: Re-watching onboarding from Settings now includes Cancel and closes without changing shortcuts, onboarding state, or Window Mode.
+
+## v1.3.12 - August 2026
+
+Download: https://update.betterstage.app/BetterStage-1.3.12.dmg
+
+- Fixed: Closing a Tabbed Layout window from the window close button dismisses its overlay tab.
+- Fixed: Switching Stages no longer leaves an inactive Tabbed Layout window floating on the desk.
+
+## v1.3.11 - August 2026
+
+Download: https://update.betterstage.app/BetterStage-1.3.11.dmg
+
+- Fixed: Leftover tabs show on the Tabbed overlay at launch, restore when clicked, and stay visible when you click another tab.
+- Fixed: Dragging a Tabbed overlay tab onto a Stages Bar card sends that window to the Stage.
+- Fixed: Sending a window back onto Tabbed Layout parks leftover tabs instead of leaving them floating, and the emptied Bento slot fills in.
+
+## v1.3.10 - August 2026
+
+Download: https://update.betterstage.app/BetterStage-1.3.10.dmg
+
+- New: Snap Wheel More Actions includes Raise Floats. In Tabbed Layout and Bento Box it brings floating and untracked windows in front of the layout without changing membership or unparking hidden tabs. It stays hidden in macOS Native.
+
+## v1.3.9 - August 2026
+
+Download: https://update.betterstage.app/BetterStage-1.3.9.dmg
+
+- Fixed: Offline Display Shelf Convert to Stage and Use Temporarily now receive clicks while another app is focused, instead of dismissing the panel.
+- Fixed: Convert to Stage shows the Keep these windows here permanently? confirmation in full, instead of collapsing the Shelf into a thin line.
+- Fixed: After Use Temporarily, clicking a tab of an app that also has windows on other Stages stays in that temporary workspace instead of jumping away.
+
+## v1.3.8 - August 2026
+
+Download: https://update.betterstage.app/BetterStage-1.3.8.dmg
+
+- Fixed: New Finder windows join the current Bento Box or Tabbed Layout on the display where they opened, with a tab or grid slot, instead of covering existing windows until you drag them.
+
+## v1.3.7 - August 2026
+
+Download: https://update.betterstage.app/BetterStage-1.3.7.dmg
+
+- Fixed: In Tabbed Layout, clicking a tab for an app that will not fill the pane — such as System Settings — still brings that window to the front.
+- Fixed: Creating a native tab in Terminal or Ghostty no longer moves the window to another pane or leaves a duplicate BetterStage tab.
+- Fixed: Closing a Terminal or Ghostty BetterStage tab closes the whole window, including every native tab inside it, instead of only the current native tab.
+
+## v1.3.6 - August 2026
+
+Download: https://update.betterstage.app/BetterStage-1.3.6.dmg
+
+- New: Shortcuts can have separate keyboard, mouse, and trackpad controls. Add multiple ways to run the same action, customize individual Stage shortcuts, and move an occupied control without losing the action’s other inputs.
+- New: Choose how BetterStage handles a disconnected display: keep its windows in the Offline Display Shelf, or leave them available on a connected display while preserving their original Stage and display for later.
+- New: Optionally show a click-through Stages Bar indicator for about 1.5 seconds after switching Stages, from Settings > General > Stage Behavior.
+- New: Customize the selected tab color in Tabbed Layout. Keep the neutral glass appearance or use your macOS accent color from Settings > Window Modes.
+- Improved: Snap Wheel trackpad triggers are more dependable. TipTap and rotate are recognized more consistently, accidental click-through is reduced, and an occupied mouse or trackpad control can be moved from Shortcuts to Snap Wheel.
+- Improved: Tabbed Layout divider previews now include empty panes, so every affected pane shows its new size while you drag.
+- Improved: Display reconnection is calmer. Brief dock or hub re-enumeration no longer sends windows to the Offline Display Shelf unnecessarily, and BetterStage is better at recognizing a display whose macOS identity changed.
+- Improved: Stage switches and Saved Workspace restores verify where windows actually landed. If a busy app accepts a move without applying it, BetterStage keeps the intended placement and retries without blocking the interface.
+- Improved: Bento Box and Tabbed Layout divider resizing now follows the Ghost Frame Preview setting, with live window updates when the preview is disabled.
+- Improved: Firefox, Floorp, and other slow apps recover window placement and visibility more reliably without blocking Stage switches or letting app dialogs lose focus.
+- Improved: Startup stays usable when one app is slow or unresponsive to Accessibility. Window discovery is isolated per app, BetterStage becomes usable after a bounded wait, and late Chrome, Firefox, Electron, Terminal, and other windows reconcile without blocking input or Stage switching.
+- Improved: Late startup recovery preserves the current workspace instead of replaying stale intent. Same-title windows return to their exact Stage, Bento Box, and Tabbed Layout slots; missing Bento members do not leave empty placeholders; selected tabs land before the visible fallback is hidden; and newer tab choices, Retile, Stage changes, and Offline Workspace actions retain authority.
+- Improved: System-accent selected tabs are easier to read in Light and Dark, using the actual accent color, tab-bar opacity, and hover state.
+- Improved: Tabbed Layout snap zones now move a window into the adjacent pane. The Snap Wheel, keyboard, and menu show directional arrows instead of halves and quarters.
+- Improved: The Tabbed More Actions fan hides slices you already have. Re-stack, undirected thirds, and directions already on the inner ring are omitted, without rewriting a customized wheel.
+- Fixed: Tabbed Layout follows customized Mission Control and App Exposé shortcuts, so similar BetterStage combinations no longer make pane controls flicker or disappear.
+- Fixed: Repeated directional focus shortcuts continue through every nearby window instead of bouncing between the first two.
+- Fixed: Refunded licenses can be replaced on the License page without discarding Stages, windows, or Saved Workspaces.
+- Fixed: Unsafe or conflicting shortcut data is repaired more carefully after an update, without dropping unrelated mouse or trackpad controls.
+- Fixed: App Routing assignment notices can be dismissed with their close button.
+- Fixed: Saved Workspaces no longer restore windows to the wrong display when macOS reuses or swaps display IDs.
+- Fixed: Tabbed Layout and Bento Box Stage switches no longer leave blank panes when an app is slow to reveal or reposition its windows.
+- Fixed: Revoking Accessibility no longer lets BetterStage hold keyboard or mouse input. Re-granting it no longer interrupts an in-flight Saved Workspace, Continuity, or Wake restore.
+- Fixed: Stage rename dialogs no longer freeze or conflict with the menu bar or Stages Bar.
+- Fixed: Rapid Tabbed Layout tab changes no longer let a delayed hide move the newly selected tab off-screen.
+- Fixed: Factory Reset and saved-state maintenance no longer risk stalling when subprocess output is large.
+- Fixed: Loading a Saved Workspace places windows on the saved Stages and Pinned Displays again. Late-discovered windows are not dumped onto the active Stage, leftover same-app windows fill remaining Bento and Tabbed slots after title drift, Command-N is not issued for stale occupancy on unpinned or disconnected displays, pin-owned windows are not dual-owned or teleported, and the Load Workspace missing-apps toggle is remembered.
+- Fixed: Pinned Tabbed Layout tabs stay visible after startup for Electron apps such as Cursor, instead of disappearing until a Window Mode change.
+- Fixed: New windows join the current Bento Box or Tabbed Layout more reliably, including Chrome, Firefox, and Electron, without waiting for a manual retile.
+- Fixed: Signed-app device identity work no longer risks deadlocking launch or Tabbed Layout switching while legacy preference data is repaired.
+- Fixed: Displays Settings no longer gets stuck at “No monitors detected” when Settings opens before startup finishes.
+- Fixed: Monitor nicknames follow physical displays across macOS display-ID changes. Legacy names are preserved until identity can be proven; recycled IDs and ambiguous identical displays fail safely.
+- Fixed: Turning off “Keep windows of a disconnected display aside” is honored. Saved Workspaces and automatic recovery preserve Home Assignments without creating Offline Display workspaces or parking those windows.
+- Fixed: Off-screen and other-Space windows are no longer adopted using stale focus or fullscreen information. Ambiguous windows stay tracked and recoverable through focus or Send to Stage.
+- Fixed: Closing a window while dragging no longer leaves stale Stage, Bento Box, or Tabbed Layout membership.
+- Fixed: Merge All and Remove Stage keep the target Window Mode. Native imports stay freeform, Bento imports join the grid without leaving reserved slots, and Tabbed imports join panes without flashing at Native frames or ejecting the selected tab.
+- Fixed: Sending a window to another Stage collapses its source Bento Box slot exactly once, and the first manual resize on the destination no longer resists or snaps back.
+- Fixed: Sending a window to the Stage it already belongs to is a toast-only no-op: no Bento reorder, Tabbed removal, fake drop, Stage switch, focus change, or move.
+- Fixed: Tabbed overlay tabs stay attached when windows are parked at local hide corners, so a Chrome New Tab appearing above a display no longer makes the original window unreachable after restart.
+- Fixed: AI Staging review chips use the generation snapshot, so badges no longer fall back to generic window IDs when discovery finishes after the panel opens.
+
+## v1.3.5 - August 2026
+
+Download: https://update.betterstage.app/BetterStage-1.3.5.dmg
+
+- New: Choose Stable or Beta updates in Settings to try upcoming releases early, and switch back to Stable at any time.
+- New: App Routing can send newly opened apps directly to a Pinned Display, including its Bento Box or Tabbed Layout, without changing your regular Stage.
+- Improved: Workspaces recover more safely after a restart, sleep, display change, or damaged saved data, while keeping your existing files intact.
+- Improved: Settings are easier to navigate, and shortcuts, gestures, and window dragging recover more reliably.
+- Improved: Save Workspace stays responsive when an app is slow to respond.
+- Improved: Updating BetterStage over an older installation is safer, with stronger protection against duplicate app instances.
+- Fixed: New windows stay on the display where they open when no App Routing rule applies.
+- Fixed: A returned display no longer remains in the Offline Shelf, and harmless display updates no longer interrupt your workspace.
+- Fixed: Stage switches more reliably preserve window visibility, placement, and focus—including full-size Tabbed Layout windows.
+- Fixed: Tabbed Layout is smoother and more dependable: tabs, pane menus, divider drags, resizing, fullscreen behavior, and native terminal tabs all behave more consistently.
+- Fixed: BetterStage panes no longer cover or block normal macOS menus, notifications, or other app windows.
+- Fixed: Bento Box more reliably keeps windows in the right place while reordering, resizing, restoring, and using Retile.
+- Fixed: Factory Reset can recover from unfinished cleanup instead of trapping BetterStage behind a startup dialog.
+- Fixed: Repeated sleep or lock notifications no longer risk crashing BetterStage.
+- Fixed: AI Staging handles delayed responses, cancellation, invalid plans, and Undo more reliably.
+
+## v1.3.3 - July 2026
+
+Download: https://update.betterstage.app/BetterStage-1.3.3.dmg
+
+- Improved: Loading a Saved Workspace now recreates missing windows for running apps, allowing multi-window layouts to return more completely.
+- Fixed: Saved Workspace loading no longer reports false restoration failures or waits unnecessarily when the required windows are already open.
+- Fixed: Saved Tabbed Layouts with multiple tabs no longer collapse into a single full-width window when window titles or positions change between sessions.
+- Fixed: Tabbed Layout tab bars no longer repeatedly refresh because of background window title changes.
+- Fixed: Workspace recovery no longer keeps waiting when an app finishes reopening without restoring any windows.
+- Fixed: Restoring Tabbed Layout windows from iTerm and other terminal apps no longer reports harmless terminal-size adjustments as failures.
+
+## v1.3.2 - July 2026
+
+Download: https://update.betterstage.app/BetterStage-1.3.2.dmg
+
+- New: In Tabbed Layout, hold Option while opening a tab's right-click menu to relaunch that app safely, while respecting unsaved-work prompts.
+- New: Settings now lets you hide wake-recovery and Workspace Continuity toasts and adjust the shared Bento Box and Tabbed Layout divider handle width from 4 to 24 px.
+- Fixed: Loading a Saved Workspace now restores duplicate same-title windows to their saved panes even after their positions have changed.
+- Fixed: Unassigned three- or four-finger trackpad swipes no longer make Tabbed Layout panes briefly disappear or interfere with Snap Wheel taps.
+- Fixed: Closing or quitting Electron apps now removes dead tabs promptly and prevents stale focus events from switching panes.
+- Fixed: Newly opened Chrome and Chromium windows no longer remain floating over an active Bento Box or Tabbed Layout when macOS briefly reports them as non-resizable.
+- Fixed: Bento Box and Tabbed Layout resize handles no longer appear over floating windows or BetterStage panels.
+- Fixed: Clicking an app in a third-party Dock now restores the intended hidden Tabbed Layout tab without changing BetterStage's existing native Dock behavior.
+
 ## v1.3.1 - July 2026
 
 Download: https://update.betterstage.app/BetterStage-1.3.1.dmg

@@ -5,7 +5,7 @@
 <h1 align="center">BetterStage</h1>
 
 <p align="center">
-  <strong>Named multi-monitor workspaces, instant switching, tiling, tabs, snap zones, and AI Staging for macOS.</strong>
+  <strong>Named multi-monitor workspaces, instant switching, TabStack panes and tabs, and AI Staging for macOS.</strong>
 </p>
 
 <p align="center">
@@ -22,12 +22,12 @@
 
 <p align="center">
   <a href="https://update.betterstage.app/video/BetterStage-120-1080p.mp4">
-    <img src="https://update.betterstage.app/video/BetterStage-120-poster.jpg" width="100%" alt="Watch the latest BetterStage demo">
+    <img src="https://update.betterstage.app/video/BetterStage-120-poster.jpg" width="100%" alt="Watch the BetterStage 1.2 overview">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://update.betterstage.app/video/BetterStage-120-1080p.mp4">▶ Watch the latest BetterStage demo</a>
+  <a href="https://update.betterstage.app/video/BetterStage-120-1080p.mp4">▶ Watch the BetterStage 1.2 overview</a>
 </p>
 
 ## What BetterStage Does
@@ -42,19 +42,28 @@ Workspace Continuity protects that setup automatically after BetterStage restart
 
 - **Stages** - up to 9 named workspaces spanning every connected monitor. Switch with `Opt+1-9`, cycle with `Opt+Tab`, send windows with `Opt+Shift+1-9`, or drag a window to the Stages Bar.
 - **Workspace Continuity** - automatically recover stages, window positions, monitor assignments, and supported layouts after restart, wake, or display changes. Available on the Free tier.
-- **Saved Workspaces** - save and load named multi-monitor arrangements with visual previews, Window Modes, Tabbed Layout panes, and optional app reopening. Pro feature.
-- **Offline Display Shelf** - when a display is missing, keep its workspace safely preserved until the display returns or you explicitly move it elsewhere.
-- **Window Modes** - choose per monitor per stage: macOS Native, Bento Box, or Tabbed Layout Mode.
-- **Bento Box** - automatic non-overlapping tiling with drag-to-resize, drop-to-swap, drop-on-edge insertion, pinning, gaps, padding, and retile.
-- **Tabbed Layout Mode** - saved pane layouts where multiple windows can share a pane as tabs. Zoom a pane, split tabs into new panes, close tabs directly, or launch an installed app into a pane from its menu.
+- **Saved Workspaces** - save and load named multi-monitor arrangements with visual previews, Window Modes, TabStack panes, and optional app reopening. Assign a shortcut to a specific Workspace, map disconnected displays to connected ones, or use optional Clean Load to quit apps and remove Stages outside the saved setup. Pro feature.
+- **Display recovery** - windows from disconnected displays move to the remaining displays and join their TabStack panes. When a display returns, choose Restore or Keep Current Layout. This replaces the former Offline Display Shelf.
+- **Window Modes** - choose Enhanced Native or TabStack independently for each monitor on each Stage. Bento Box (Legacy) remains available when enabled in Settings.
+- **TabStack** - the unified successor to Bento Box and Tabbed Layout. Split resizable panes, join windows as tabs, swap windows, move whole tab stacks, zoom a pane, launch apps into panes, and save reusable layouts. Reflow as Grid balances the current panes.
+- **TabStack appearance and behavior** - choose Comfortable, Compact, or Custom styles; adjust tab height, text colors, gaps, padding, and empty panes; configure new-window placement and Split/Swap drop zones. Automatically applying a default layout when entering TabStack is opt-in.
+- **Window behavior rules** - choose Automatic, Manage in Layout, or Keep Floating for individual windows, and save rules for similar windows.
 - **Snap Zones** - 15 keyboard and drag zones for halves, thirds, two-thirds, quarters, and full-screen placement.
-- **Snap Wheel** - a configurable radial menu for snap zones, Window Modes, stage actions, Retile, AI Staging, and more. Supports keyboard, mouse, modifier, and 4/5-finger trackpad triggers.
+- **Snap Wheel** - a configurable radial menu for snapping, directional pane moves, Window Modes, Stage actions, Center, Float App, Reflow as Grid, AI Staging, and more. Supports keyboard, mouse, modifier, and 4/5-finger trackpad triggers.
+- **Custom Actions (Experimental)** - add Open Application, Open File, Run Shortcut, or Run Command actions to the Snap Wheel, with custom SF Symbol icons and submenus.
 - **Pinned Displays** - keep selected monitors visible across all stages for chat, docs, music, dashboards, or reference windows.
-- **App Routing** - assign an app to a stage and monitor so its new windows open in the workspace where they belong.
+- **App Routing** - match an application and optionally its window title, so different windows from the same app can open on different Stages and monitors.
+- **Portable Settings backups** - export and import preferences, shortcuts, app rules, AI Recipes, Snap Wheel configuration, and custom TabStack layouts. Local Custom Actions must be reassigned after import.
 - **Keyboard-first control** - customizable shortcuts, conflict warnings, Standard and European keyboard layout presets, directional focus, scoped `Cmd+\`` cycling, and a searchable shortcut settings view.
 - **Customizable menu bar** - choose and reorder the BetterStage logo, Stage index, total window count, Stage name, and Window Modes, with three Stage index styles.
 - **AI Staging** - describe the workspace you want in a floating chat panel. Mention apps, windows, stages, monitors, or Window Modes; review the proposed plan; refine it; apply; and undo the whole arrangement in one step.
 - **Recipes** - save multiple sets of AI Staging instructions for different workflows, switch between them, duplicate or rename them, choose a default, and preview the exact prompt sent to the model.
+
+## Latest Release: 2.0.4
+
+The latest Stable release is **2.0.4 (build 2.0.4901)**. It improves window tracking, pane ownership, wake and workspace recovery, pinned displays, and license recovery. See the [full release notes](CHANGELOG.md).
+
+Coming from 1.x? Start with the [TabStack guide](https://betterstage.app/docs/tabstack), [Saved Workspaces](https://betterstage.app/docs/workspaces), [Custom Actions](https://betterstage.app/docs/custom-actions), and [Settings backups](https://betterstage.app/docs/settings-backup).
 
 ## AI Staging
 
@@ -75,7 +84,7 @@ Every download includes a 10-day Pro trial. If you do not upgrade, BetterStage f
 | Tier | Includes |
 | --- | --- |
 | Free | 3 stages, automatic Workspace Continuity, Snap Zones, Snap Wheel, keyboard shortcuts, multi-monitor support, 1 device |
-| Pro | 9 stages, Saved Workspaces, bring-your-own-provider AI Staging, Bento Box, Tabbed Layout Mode, Pinned Displays, all future updates |
+| Pro | 9 stages, Saved Workspaces, bring-your-own-provider AI Staging, TabStack, Bento Box (Legacy), Pinned Displays, all future updates |
 | BetterStage AI | Everything in Pro plus managed AI Staging, 200 credits per month, up to 3 devices |
 
 Pro is lifetime-only:
