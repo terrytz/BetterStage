@@ -2,6 +2,20 @@
 
 Public release notes for BetterStage. The latest download is served from https://betterstage.app/download/thanks; direct update artifacts are served from https://update.betterstage.app/.
 
+## v2.0.5 - September 12, 2026
+
+Download: https://update.betterstage.app/BetterStage-2.0.5.dmg
+
+- Fixed: Changing your Accessibility permission while BetterStage is running no longer risks stalling keyboard and mouse input system-wide.
+- Fixed: Four-finger tap keeps opening the Snap Wheel after switching the trackpad between Bluetooth and wired.
+- Fixed: Default Snap Wheel triggers are restored after retired pinch gestures, so a saved trigger list that filters down to empty no longer silently disables mouse, trackpad, and keyboard activation.
+- Fixed: Choosing Keep Current Layout after a display returns now brings parked selected windows back into their panes instead of leaving them hidden.
+- Fixed: Restoring windows after a display returns is more responsive and no longer blocks input while a busy app finishes.
+- Fixed: Clicking an app in the Dock now activates it reliably; the previously active window no longer briefly takes focus back.
+- Fixed: Clicking an app's Dock icon now restores its parked TabStack tab, including System Settings, instead of doing nothing until you activate another app first.
+- Fixed: A TabStack tab restore now retries once when a slow app has not accepted its pane position, instead of leaving the previous tab covering the new one.
+- Fixed: Using Command-` to switch a window now updates the active tab to match.
+
 ## v2.0.4 - September 2026
 
 Download: https://update.betterstage.app/BetterStage-2.0.4-build-2.0.4901.dmg

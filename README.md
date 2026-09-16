@@ -48,7 +48,7 @@ Workspace Continuity protects that setup automatically after BetterStage restart
 - **TabStack** - the unified successor to Bento Box and Tabbed Layout. Split resizable panes, join windows as tabs, swap windows, move whole tab stacks, zoom a pane, launch apps into panes, and save reusable layouts. Reflow as Grid balances the current panes.
 - **TabStack appearance and behavior** - choose Comfortable, Compact, or Custom styles; adjust tab height, text colors, gaps, padding, and empty panes; configure new-window placement and Split/Swap drop zones. Automatically applying a default layout when entering TabStack is opt-in.
 - **Window behavior rules** - choose Automatic, Manage in Layout, or Keep Floating for individual windows, and save rules for similar windows.
-- **Snap Zones** - 15 keyboard and drag zones for halves, thirds, two-thirds, quarters, and full-screen placement.
+- **Snap Zones** - 16 keyboard and drag zones for halves, thirds, two-thirds, quarters, Center, and full-screen placement.
 - **Snap Wheel** - a configurable radial menu for snapping, directional pane moves, Window Modes, Stage actions, Center, Float App, Reflow as Grid, AI Staging, and more. Supports keyboard, mouse, modifier, and 4/5-finger trackpad triggers.
 - **Custom Actions (Experimental)** - add Open Application, Open File, Run Shortcut, or Run Command actions to the Snap Wheel, with custom SF Symbol icons and submenus.
 - **Pinned Displays** - keep selected monitors visible across all stages for chat, docs, music, dashboards, or reference windows.
@@ -59,9 +59,9 @@ Workspace Continuity protects that setup automatically after BetterStage restart
 - **AI Staging** - describe the workspace you want in a floating chat panel. Mention apps, windows, stages, monitors, or Window Modes; review the proposed plan; refine it; apply; and undo the whole arrangement in one step.
 - **Recipes** - save multiple sets of AI Staging instructions for different workflows, switch between them, duplicate or rename them, choose a default, and preview the exact prompt sent to the model.
 
-## Latest Release: 2.0.4
+## Latest Release: 2.0.5
 
-The latest Stable release is **2.0.4 (build 2.0.4901)**. It improves window tracking, pane ownership, wake and workspace recovery, pinned displays, and license recovery. See the [full release notes](CHANGELOG.md).
+The latest Stable release is **2.0.5 (build 2.0.5900)**, published 12 September 2026. It restores Accessibility, Snap Wheel, display-return, Dock, and TabStack tab focus more reliably. See the [full release notes](CHANGELOG.md).
 
 Coming from 1.x? Start with the [TabStack guide](https://betterstage.app/docs/tabstack), [Saved Workspaces](https://betterstage.app/docs/workspaces), [Custom Actions](https://betterstage.app/docs/custom-actions), and [Settings backups](https://betterstage.app/docs/settings-backup).
 
@@ -79,7 +79,7 @@ The current public AI prompt files are in [`prompt-template/`](prompt-template/)
 
 ## Pricing
 
-Every download includes a 10-day Pro trial. If you do not upgrade, BetterStage falls back to the Free tier.
+Eligible Macs can start a 7-day Pro trial without a credit card. Previous trials do not reset when you reinstall or change accounts. Free users on eligible Macs can also try Pro for 15 minutes once every 24 hours. If you do not upgrade, BetterStage falls back to the Free tier.
 
 | Tier | Includes |
 | --- | --- |
