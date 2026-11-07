@@ -26,7 +26,10 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Tap this checkout
-        run: brew tap terrytz/betterstage "$GITHUB_WORKSPACE"
+        run: |
+          brew tap terrytz/betterstage "$GITHUB_WORKSPACE"
+          # Homebrew now refuses casks from a tap it has not been told to trust.
+          brew trust terrytz/betterstage
 
       - name: Check cask style
         run: brew style --cask --except-cops Homebrew/OSDependsOn terrytz/betterstage/betterstage
