@@ -21,13 +21,13 @@
 ---
 
 <p align="center">
-  <a href="https://update.betterstage.app/video/BetterStage-120-1080p.mp4">
-    <img src="https://update.betterstage.app/video/BetterStage-120-poster.jpg" width="100%" alt="Watch the BetterStage 1.2 overview">
+  <a href="https://update.betterstage.app/video/BetterStage-landing-20260907-1080p.mp4">
+    <img src="https://update.betterstage.app/video/BetterStage-landing-20260907-poster-v1.jpg" width="100%" alt="Watch the BetterStage overview">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://update.betterstage.app/video/BetterStage-120-1080p.mp4">▶ Watch the BetterStage 1.2 overview</a>
+  <a href="https://update.betterstage.app/video/BetterStage-landing-20260907-1080p.mp4">▶ Watch the BetterStage overview</a>
 </p>
 
 ## What BetterStage Does
