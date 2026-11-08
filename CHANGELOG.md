@@ -2,6 +2,123 @@
 
 Public release notes for BetterStage. The latest download is served from https://betterstage.app/download/thanks; direct update artifacts are served from https://update.betterstage.app/.
 
+## v2.3.0 - November 7, 2026
+
+Download: https://update.betterstage.app/BetterStage-2.3.0.dmg
+
+- New: NativeStack (Beta, Pro). In Native mode, hold ⌥ and drag a window onto another to stack them as tabs in a floating pane. Turn it on in Settings → Window Modes → Native.
+- New: Split view in a NativeStack. Right-click a tab and choose Split View With to show two tabs side by side; a stack can hold several pairs.
+- New: Drag tabs between TabStack panes and NativeStacks, and hold ⌥ while dragging any window onto a pane to add it as a tab.
+- New: Saved Workspaces can remember browser tabs in Safari, Chrome and most Chromium browsers (not Arc or Dia), and they keep NativeStacks.
+- New: Trackpad haptics for the Snap Wheel: feel a tick as the pointer reaches each action. Turn it on in Settings → Snap Wheel → Style (Force Touch trackpad).
+- New: Merge All Stages asks before merging, and the "Display reconnected" prompt can be turned off in Settings → Workspaces.
+- Improved: Settings are reorganized. A new Apps page brings App Routing, App Exceptions and window rules together, and Window Modes has a tab for each mode.
+- Improved: Switching a TabStack display to Native turns each pane into a NativeStack, and switching back turns each stack into a pane.
+- Improved: Loading a Workspace is faster, gives a window to apps running without one (like Finder or Discord in the menu bar), and names any browser that refused access.
+- Improved: An app's main window comes back about a second after you close one of its dialogs, such as Settings.
+- Improved: TabStack panes are fully opaque by default.
+- Improved: The ⌘Tab switcher's background is easier to read, with a white tint in Light Mode and a black tint in Dark Mode. Adjust it in Settings → ⌘Tab Switcher → Background tint.
+- Improved: Pro keeps working offline for up to 7 days on paid and lifetime licenses (was 48 hours).
+- Improved: When a license can't be activated, BetterStage says whether you're offline, the request timed out or something blocked it.
+- Fixed: Windows could stay hidden after a tab or Stage switch, a Ghostty window closing, or the screen locking. BetterStage now brings them back.
+- Fixed: Windows of some apps, such as Safari web apps and Outlook, could leave their TabStack pane and come back, or show up as a duplicate tab.
+- Fixed: Opening or quitting apps no longer brings up "Restore Workspace" or blanks TabStack panes when the Dock resizes or a display comes back with a new ID.
+- Fixed: Connecting, disconnecting or resizing a display keeps windows in their TabStack panes and keeps your pane sizes.
+- Fixed: TabStack tabs no longer switch on their own, PDF viewer and Terminal tabs no longer appear twice, and ⌘T in a background Ghostty tab no longer leaves the new tab floating.
+- Fixed: A window moved onto a TabStack display without dragging (Window → Move to, a shortcut, or a window-snapping app) becomes the pane's visible tab.
+- Fixed: On a pinned display, a window that opens late returns to its saved pane, and picking a hidden tab's app in the Dock or in Raycast or Alfred shows it.
+- Fixed: Quitting BetterStage no longer switches a display to another Desktop, and a Stage no longer keeps re-showing itself when one of its windows is on another Desktop.
+- Fixed: Opening a new version installed over a running BetterStage now takes over from the old copy.
+- Fixed: Loading a Workspace no longer waits up to 90 seconds or reports that Finder or Discord couldn't open a window.
+- Fixed: The Settings window comes back on screen when it was left on a display you disconnected.
+- Fixed: The menu bar's New Stage item shows your actual shortcut instead of ⌥⌘N, and ⌘A selects the search text in a kept-open ⌘Tab switcher.
+- Fixed: Clicking an app's Dock icon switches to its Stage and shows its window, even when macOS doesn't bring the app forward.
+- Fixed: The New Stage shortcut now says when you've reached the Free plan's 3 Stages, as the menu does.
+- Fixed: A TabStack window left off every Desktop after a failed switch comes back, App Routing rules stay on their display when macOS renumbers displays, and an unreadable Workspace Continuity file is set aside so saving works again.
+
+## v2.2.4 - October 16, 2026
+
+Download: https://update.betterstage.app/BetterStage-2.2.4.dmg
+
+- New: Keep the ⌘Tab switcher open: tap ⌥ while holding ⌘, or click the pin in the search bar, and it stays open after you release ⌘.
+- New: Close windows from the ⌘Tab switcher with ⌘⌥W or the × on a window, without bringing them forward.
+- New: Search the ⌘Tab switcher for an app that isn't running and open it right in the current Stage, or press ⌘1–9 to jump to a Stage.
+- New: Forget displays you no longer use in Settings → Displays. After a display has been gone for a week, BetterStage asks once.
+- Improved: Picking a window on another Desktop or in full screen in the ⌘Tab switcher now switches to it, and those windows are listed right after launch.
+- Improved: A redesigned ⌘Tab switcher grid with larger previews, cleaner titles, and faster thumbnails.
+- Improved: Shortcut labels match your keyboard layout, such as ⌘< on a German keyboard, and cycling an app's windows follows your Mac's "Move focus to next window" shortcut.
+- Improved: Preview, Skim, and other apps with native tabs keep one TabStack tab per tab group, and switching their tabs no longer moves them between panes.
+- Improved: Windows stay in their own Stages through display changes, Workspace loads, and slow launches, and windows from a disconnected display join the remaining display's TabStack.
+- Improved: Windows shown on every Desktop (Dock → Options → Assign To → All Desktops) float above TabStack panes, can still be snapped, and BetterStage explains why they don't tile.
+- Fixed: Switching TabStack tabs no longer flickers the previous tab back in front, and switching Terminal tabs no longer moves the window in macOS Native mode.
+- Fixed: A new Ghostty window no longer replaces another Ghostty window in the same pane.
+- Fixed: With a Pinned Display, reconnecting a display no longer turns its windows into tabs, and pinning or unpinning no longer reverts a few seconds later.
+- Fixed: Loading, merging, and undoing Workspaces now work with Pinned Displays, disconnected displays, and apps that aren't installed.
+- Fixed: Quitting BetterStage no longer pauses for a couple of seconds when an app isn't responding.
+
+## v2.2.3 - October 8, 2026
+
+Download: https://update.betterstage.app/BetterStage-2.2.3.dmg
+
+- Improved: A quick ⌘Tab in the BetterStage switcher now returns to the window you just came from, like the macOS app switcher.
+- Fixed: Switching TabStack tabs no longer snaps back to the previous tab when another window in the pane is busy, closed, or minimized to the menu bar.
+- Fixed: Clicking quickly between TabStack tabs no longer moves a tab into another pane or leaves the tab bar showing a different tab from the window on screen.
+- Fixed: Tab switching stays responsive when another app stops responding, instead of stalling for seconds until that app recovers.
+- Fixed: ⌘` once again cycles through an app's windows when some of them are hidden TabStack tabs.
+- Fixed: Switching away from a TabStack tab whose window stays on top of other windows (such as a picture-in-picture or always-on-top window) now hides it instead of leaving it over the new tab.
+
+## v2.2.2 - October 7, 2026
+
+Download: https://update.betterstage.app/BetterStage-2.2.2.dmg
+
+- New: Move Tab Left in Pane and Move Tab Right in Pane shortcuts move the selected TabStack tab along its tab bar without switching tabs. Set them in Settings → Shortcuts.
+- Improved: Merge All Stages is now unavailable while preserved Stages exist, with a note to swap them in or delete them first.
+- Fixed: In macOS Native mode, a window you reopen (such as a Finder window) now stays where macOS opens it instead of snapping back to an earlier size and position.
+- Fixed: On the Free plan, swapping in a preserved Stage now sticks instead of being undone after the license is rechecked or BetterStage restarts.
+
+## v2.2.1 - October 6, 2026
+
+Download: https://update.betterstage.app/BetterStage-2.2.1.dmg
+
+- Improved: Saving a Workspace now keeps only the displays connected at that moment, so a Workspace saved away from your home display no longer asks about it on every load.
+- Fixed: Two identical monitors that report the same serial number are now told apart, so pinning, unpinning, and display changes after wake affect only the display you chose.
+- Fixed: Using BetterStage in more than one macOS account on the same Mac no longer breaks Pro previews or a trial in the other account.
+- Fixed: Clicking a TabStack tab no longer snaps back to the previous tab when the outgoing window is assigned to all desktops.
+- Fixed: Dragging the left or top edge of a terminal in a TabStack pane now resizes the pane instead of snapping back.
+- Fixed: In macOS Native mode, windows no longer jump to an old size or position after opening, or snap back a few seconds after you move or resize them.
+- Fixed: A Stage switch that takes a while to finish no longer pulls focus back to one of its windows after you have moved on.
+
+## v2.2.0 - October 2, 2026
+
+Download: https://update.betterstage.app/BetterStage-2.2.0.dmg
+
+- New: Switching Stages is cleaner. When you switch Stages, BetterStage now moves the windows of the Stage you left into private macOS Spaces that stay out of sight, instead of parking them in your screen corners, so your screens show only the Stage you're in. Windows come back in the same spot and size, monitors can sit edge to edge with no gap, only the windows you mean to move are affected (not whole apps), and if BetterStage quits unexpectedly your windows come back on their own. The old corner-placement setting is gone.
+- New: Stages now work with macOS Spaces. A Stage can include several Desktops on every display, each with its own layout. Switch Stages to change your set of windows, or switch Desktops to see a different layout within the same Stage.
+- New: ⌘Tab, rebuilt for Stages. Hold ⌘ and press Tab to see your windows listed by Stage, in Stages Bar order, with the active Stage marked. Pick a window on another Stage and BetterStage switches to that Stage and brings up that exact window, even a hidden TabStack tab or a minimized window. Hold ⌘ and type to search all your windows or narrow the list by Stage name, press ⌘⌥B to bring the selected window into your current Stage, and windows shared between Stages appear under each Stage. It is a Pro feature and optional: choose it during onboarding or in Settings → ⌘Tab Switcher. Window previews need Screen Recording permission (without it you get app icons), and macOS ⌘Tab works again straight away if you turn it off or quit BetterStage.
+- New: Put one window in more than one Stage. Choose Show in Stages from the Snap Wheel, the menu bar, or the badge on a tab, and the window appears in every Stage you pick. Each Stage keeps its own layout and window position for it, and BetterStage remembers this across restarts.
+- New: Choose where TabStack tabs go. For each pane, put the tabs on the top, bottom, left or right edge. On the left or right, tabs stack vertically, can show titles or compact app icons, and scroll when you have more than fit. With Auto-hide, windows fill the whole pane and a small mark shows where the tabs are; hover that edge and the tab bar appears.
+- New: Move windows between displays. Keep pressing the move shortcut toward a screen edge, or use the Snap Wheel the same way, to carry a window onto the neighboring display, or pick a display by name from the new Move to Display menu. When the window lands in a TabStack, it goes into the pane facing the display it came from.
+- New: BetterStage is available in 18 languages, with a rebuilt first-run tour that has interactive previews where you arrange a layout, try the Snap Wheel, and see how Stages work. Choose a language in Settings → General.
+- Improved: Saved Workspaces remember Spaces, and missing Spaces are recreated when you restore one.
+- Improved: When you unplug a display, the windows on it move to the displays that remain, and its layout is restored automatically when it returns.
+- Improved: Set screen padding and pane gaps for each display, and use Identify Displays to see which display is which.
+- Improved: AI Staging groups related windows into tabs and keeps the ones you need side by side.
+- Improved: Choose how many windows Native Retile arranges before it moves the rest to another Stage.
+- Improved: Pin the Settings window so it stays above other windows.
+- Improved: Finder Quick Look previews stay out of your layouts. To include them, turn it on in Settings → App Exceptions.
+- Improved: Faster startup. BetterStage starts switching Stages within seconds, and if macOS blocks BetterStage from clearing windows away, Stage switching keeps working and returns on its own.
+- Improved: Settings opens faster.
+- Improved: If a Saved Workspace can't load, the message names the apps and reasons.
+- Fixed: Mission Control on macOS 26 shows your windows again.
+- Fixed: Stage switches could stall, or snap a window back to an old position.
+- Fixed: TabStack dividers no longer cover app popups.
+- Fixed: Terminal and Ghostty native tabs could leave stale or missing TabStack entries.
+- Fixed: Dragging a tab to another display, or back, now joins and splits panes correctly.
+- Fixed: Windows stranded when a display disconnected now return to a remaining display.
+- Fixed: Fullscreen on one display no longer interrupts window management on another.
+- Fixed: Windows from apps with unusual process records, such as Xcode's Device Hub, are now found.
+- Note: Stages saved by 2.2 can't be opened by earlier versions. If you reinstall BetterStage 2.0.x, your Stages won't load, so update to the latest version instead.
+
 ## v2.0.5 - September 12, 2026
 
 Download: https://update.betterstage.app/BetterStage-2.0.5.dmg

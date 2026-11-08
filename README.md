@@ -59,9 +59,9 @@ Workspace Continuity protects that setup automatically after BetterStage restart
 - **AI Staging** - describe the workspace you want in a floating chat panel. Mention apps, windows, stages, monitors, or Window Modes; review the proposed plan; refine it; apply; and undo the whole arrangement in one step.
 - **Recipes** - save multiple sets of AI Staging instructions for different workflows, switch between them, duplicate or rename them, choose a default, and preview the exact prompt sent to the model.
 
-## Latest Release: 2.0.5
+## Latest Release: 2.3.0
 
-The latest Stable release is **2.0.5 (build 2.0.5900)**, published 12 September 2026. It restores Accessibility, Snap Wheel, display-return, Dock, and TabStack tab focus more reliably. See the [full release notes](CHANGELOG.md).
+The latest Stable release is **2.3.0 (build 2.3.900)**, published 7 November 2026. It adds NativeStack (Beta, Pro): hold ⌥ and drag one window onto another to stack them as tabs, with split view inside a stack. Saved Workspaces can now remember browser tabs, the Snap Wheel can give trackpad haptics, Settings are reorganized, and Pro keeps working offline for up to 7 days. It also fixes many TabStack, display and Dock issues. See the [full release notes](CHANGELOG.md).
 
 Coming from 1.x? Start with the [TabStack guide](https://betterstage.app/docs/tabstack), [Saved Workspaces](https://betterstage.app/docs/workspaces), [Custom Actions](https://betterstage.app/docs/custom-actions), and [Settings backups](https://betterstage.app/docs/settings-backup).
 
